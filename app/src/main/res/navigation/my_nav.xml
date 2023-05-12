@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.my_task.splashFragment"
+        android:label="fragment_spalsh"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_viewPagerFragment"
+            app:destination="@id/viewPagerFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splashFragment_to_dashboard"
+            app:destination="@id/dashboard"
+            app:popUpTo="@id/dashboard"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewPagerFragment"
+        android:name="com.example.my_task.onboarding.viewPagerFragment"
+        android:label="fragment_view_pager"
+        tools:layout="@layout/fragment_view_pager" >
+        <action
+            android:id="@+id/action_viewPagerFragment_to_dashboard"
+            app:destination="@id/dashboard"
+            app:popUpTo="@id/dashboard"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <activity
+        android:id="@+id/dashboard"
+        android:name="com.example.my_task.home.dashboard"
+        android:label="activity_dashboard"
+        tools:layout="@layout/activity_dashboard" />
+</navigation>

@@ -1,0 +1,54 @@
+<resources>
+    <string name="app_name">My Task</string>
+
+    //Onboarding
+    <string name="Header">Manage your \ntask with <u>My \nTask</u></string>
+    <string name="onboarding_1">The app you needed to \n<u>Stay productive.</u></string>
+    <string name="onboarding_2">Remember everyday. \nevery minute. \nevery task.</string>
+    <string name="onboarding_3">Let\'s explore!</string>
+
+    //btn
+    <string name="btn_next">Next</string>
+    <string name="btn_skip">Skip</string>
+    <string name="btn_done">Done</string>
+    <string name="btn_finish">Finish</string>
+    <string name="btn_add">Add</string>
+    <string name="btn_previous">See previous task</string>
+
+    //menu bar
+    <string name="calendar_navbar">Calendar</string>
+    <string name="notification_navbar">Notification</string>
+    <string name="home_navbar">Home</string>
+    <string name="profile_navbar">Profile</string>
+
+    //Dashboard
+    <string name="heading_nameApp">My Task</string>
+    <string name="heading_greeting">Good $day, $Name</string>
+
+    //Add task
+    <string name="add_todo">Add to-do</string>
+    <string name="categories">categories</string>
+    <string name="contributor">Add contributor (Optional)</string>
+    <string name="due">Due to</string>
+    <string name="time">Time</string>
+
+    //Calendar mode
+    <string name="heading_2">Today\'s task</string>
+    <string name="day">April 13</string>
+    <string name="pending">0 task pending</string>
+
+    //Notification
+    <string name="header_3">Notification</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    //Bottom Nav Menu
+    <string name="calendar_fragment">Calendar</string>
+    <string name="notification_fragment">Notification</string>
+    <string name="home_fragment">Home</string>
+    <string name="setting_fragment">Setting</string>
+    <string name="profile_fragment">Profile</string>
+    <string name="taskEmpty">There is nothing to do</string>
+    <string name="emptyTodo">Add something to do</string>
+
+</resources>

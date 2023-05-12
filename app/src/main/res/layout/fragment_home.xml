@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".homeFragment">
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:id="@+id/etCategory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etAddToDo">
+
+        <AutoCompleteTextView
+            android:id="@+id/autocompleteCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:completionThreshold="1"
+            android:inputType="none"
+            android:hint="Categories"
+            android:background="@drawable/edit_text_box"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <EditText
+        android:id="@+id/etAddToDo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="50dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/filterBtn"
+        android:hint="Add to-do"
+        android:paddingLeft="16dp"
+        android:textSize="16sp"
+        android:background="@drawable/edit_text_box"/>
+
+    <Button
+        android:id="@+id/historyBtn"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="50dp"
+        android:background="@drawable/ic_history"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayoutTask" />
+
+    <Button
+        android:id="@+id/filterBtn"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/ic_filter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayoutTask" />
+
+    <FrameLayout
+        android:id="@+id/frameLayoutTask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/box_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/greetings">
+
+        <ImageButton
+            android:id="@+id/prevTask"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_next"
+            android:background="@drawable/circle_stroke"
+            android:layout_marginStart="3dp"
+            android:layout_gravity="center|left"
+            android:rotation="180"/>
+
+        <ImageButton
+            android:id="@+id/nextTask"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_next"
+            android:background="@drawable/circle_stroke"
+            android:layout_marginEnd="3dp"
+            android:layout_gravity="center|right"/>
+
+        <TextView
+            android:id="@+id/tvDetailTask"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/emptyTodo"
+            android:layout_gravity="bottom|left"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="35dp"/>
+
+        <TextView
+            android:id="@+id/tvTaskName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|left"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="55dp"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/taskEmpty" />
+
+        <ImageView
+            android:id="@+id/ivTaskPicture"
+            android:layout_width="240dp"
+            android:layout_height="320dp"
+            android:src="@drawable/empty"
+            android:layout_gravity="center|top"/>
+
+        <Button
+            android:id="@+id/doneTaskBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/rounded_btn"
+            android:text="Done"
+            android:textSize="14sp"/>
+    </FrameLayout>
+
+    <EditText
+        android:id="@+id/etAddContributor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="50dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Add contributor (Optional)"
+        android:paddingLeft="16dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etCategory"
+        android:background="@drawable/edit_text_box"/>
+
+    <EditText
+        android:id="@+id/etDueTo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:background="@drawable/edit_text_box"
+        android:ems="10"
+        android:hint="Due to"
+        android:paddingLeft="16dp"
+        android:inputType="date"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/etTime"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etAddContributor" />
+
+    <EditText
+        android:id="@+id/etTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:background="@drawable/edit_text_box"
+        android:ems="10"
+        android:hint="Time"
+        android:paddingLeft="16dp"
+        android:inputType="time"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/addBtn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/etDueTo"
+        app:layout_constraintTop_toBottomOf="@+id/etAddContributor" />
+
+    <Button
+        android:id="@+id/addBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="50dp"
+        android:background="@drawable/rounded_btn"
+        android:text="Add"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/etTime"
+        app:layout_constraintTop_toBottomOf="@+id/etAddContributor" />
+
+    <TextView
+        android:id="@+id/appName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="45dp"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/app_name"
+        android:textColor="@color/black_700"
+        android:textSize="37sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="25dp"/>
+
+    <TextView
+        android:id="@+id/greetings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="45dp"
+        android:fontFamily="sans-serif-black"
+        android:text="TextView"
+        android:textColor="@color/black_700"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appName" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
